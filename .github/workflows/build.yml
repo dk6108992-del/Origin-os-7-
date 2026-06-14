@@ -17,8 +17,8 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Grant permission
-        run: chmod +x OriginOSLauncher/gradlew
+      - name: Find gradlew
+        run: find . -name gradlew
 
       - name: Build APK
         run: cd OriginOSLauncher && ./gradlew assembleDebug --no-daemon
