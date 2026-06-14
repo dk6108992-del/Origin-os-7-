@@ -18,7 +18,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Find gradlew
-        run: find . -name gradlew
+        run: chmod +x OriginOSLauncher/OriginOSLauncher/gradlew
 
       - name: Build APK
         run: cd OriginOSLauncher/OriginOSLauncher && ./gradlew assembleDebug --no-daemon
